@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Memory game by ALI MAKOUAR</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <script src="../assets/bootstrap/js/jquery.js"></script>
+    <link rel="stylesheet" href="styleMemo.css">
+
+
+</head>
+
+<body onload="melanger()">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
+        <div class="container"><a class="navbar-brand" href="../../index.html">Ateliers TechWeb game by ALI MAKOUAR</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarResponsive"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">      <button id="restart" class="btn btn-primary" style="border: solid 1px;">RESTART</button>
+                    </li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Ateliers&nbsp;</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../snake/snake.html">Snake</a>
+                            <a class="dropdown-item" href="../memory/memory.html">Memory game</a>
+                            <a class="dropdown-item" href="../Quiz/quiz.html">Quiz</a>
+                            <a class="dropdown-item" href="../dom/dom.html">Dom</a>
+                            <a class="dropdown-item" href="../pizza/pizza.html">Pizza</a>
+                        </div>                    
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="text-center text-white masthead">
+        <div class="masthead-content">
+            <div class="container" style="margin-top: -100px;">
+                <h2 class="masthead-subheading mb-0">Memory Game</h2>
+            </div>
+            <select name="difficulty" id="difficulty" onchange="Difficultee()">
+                <option value="easy" >Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+              <button id="hint" style="display:inline;" onclick="giveHint();">Hint</button>
+              <button id="start" syle="display:inline;" onclick="play();disabled='true';">Start</button>
+              <div id="countdown">You have 4 seconds to memorize the pictures</div> 
+              <div class="jeu" id="jeu">
+                  <div class="case" onclick="flipImage(0);"><img id="img1" src="pics/p1.jpg" ></div>
+                  <div class="case" onclick="flipImage(1);" ><img id="img2" src="pics/p1.jpg" ></div>
+                  <div class="case" onclick="flipImage(2);"><img id="img3" src="pics/p2.jpg"></div>
+                  <div class="case" onclick="flipImage(3);"><img id="img4" src="pics/p2.jpg"></div>
+                  <div class="case" onclick="flipImage(4);"><img id="img5" src="pics/p3.jpg"></div>
+                  <div class="case" onclick="flipImage(5);"><img id="img6" src="pics/p3.jpg"></div>
+                  <div class="case" onclick="flipImage(6);"><img id="img7" src="pics/p4.jpg"></div>
+                  <div class="case" onclick="flipImage(7);"><img id="img8" src="pics/p4.jpg"></div>
+                  <div class="case" onclick="flipImage(8);"><img id="img9" src="pics/p5.jpg"></div>
+                  <div class="case" onclick="flipImage(9);"><img id="img10" src="pics/p5.jpg"></div>
+                  <div class="case" onclick="flipImage(10);"><img id="img11" src="pics/p6.jpg"></div>
+                  <div class="case" onclick="flipImage(11);"><img id="img12" src="pics/p6.jpg"></div>
+                  <div class="case" onclick="flipImage(12);"><img id="img13" src="pics/p7.jpg"></div>
+                  <div class="case" onclick="flipImage(13);"><img id="img14" src="pics/p7.jpg"></div>
+                  <div class="case" onclick="flipImage(14);"><img id="img15" src="pics/p8.jpg"></div>
+                  <div class="case" onclick="flipImage(15);"><img id="img16" src="pics/p8.jpg"></div>
+                  <hr/>
+              </div>
+        </div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+    </header>
+    <footer class="py-5 bg-black">
+        <div class="container">
+            <p class="text-center text-white m-0 small">Copyright&nbsp;© Memory game by ALI MAKOUAR 2021</p>
+        </div>
+    </footer>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+<script src="script.js"></script>

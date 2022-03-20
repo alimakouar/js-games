@@ -1,0 +1,28 @@
+.colored{
+    color:blue;
+}
+img{
+    width:150px;
+    height:150px;
+    display:block;
+    margin-left:40%;
+    margin-top:20px;
+}
+.contenu{
+    width:65%;
+    float:left;
+    border:1px rgb(255, 255, 255) solid;
+    padding: 30px 20px 30px 20px;
+    font-family:'Courier New', sans-serif;
+    margin-left: 20px;
+}
+
+.outils{
+    float:right;
+    width:25%;
+    margin-left:5px;
+    margin-right: 20px;
+    border:2px rgb(160, 157, 157) solid;
+    padding: 30px 20px 30px 20px;
+    line-height: 1.8;
+}

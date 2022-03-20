@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>DOM vs JQUERY by ALI MAKOUAR</title>
+    <link rel="stylesheet" href="styleDom.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <script src="../assets/bootstrap/js/jquery.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
+        <div class="container"><a class="navbar-brand" href="../../index.html">Ateliers TechWeb game by ALI MAKOUAR</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarResponsive"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">      <button id="restart" class="btn btn-primary" style="border: solid 1px;" onclick="raz()">RESTART</button>
+                    </li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Ateliers&nbsp;</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../snake/snake.html">Snake</a>
+                            <a class="dropdown-item" href="../memory/memory.html">Memory game</a>
+                            <a class="dropdown-item" href="../Quiz/quiz.html">Quiz</a>
+                            <a class="dropdown-item" href="../dom/dom.html">Dom</a>
+                            <a class="dropdown-item" href="../pizza/pizza.html">Pizza</a>
+
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>       
+
+    <header class="text-center text-white masthead">
+        <div class="masthead-content" style="margin-top: -120px;">
+            <div class="container">
+                <h1 class="masthead-heading mb-0">DOM vs JQUERY</h1>
+            </div>
+            <div class="all">
+                <div class="contenu" contenteditable="true">
+                    <p><span id="first"><span class="firstletter">D</span>rawings me opinions returned absolute in. </span><span class="firstletter">O</span>therwise therefore  did are unfeeling something.
+                        <span class="firstletter">C</span>ertain be ye amiable by exposed so. To celebrated estimating excellence do. <span class="firstletter">C</span>oming either suffer living her theirs.
+                        <img src="pic.jpg" id="pic">
+                        <span class="firstletter">F</span>urnished do otherwise daughters contented conveying attempted no. <span class="firstletter">W</span>as yet general visitor present hundred too brother fat arrival.
+                        <span class="firstletter">F</span>riend are day own either lively new.
+                        <span class="firstletter">W</span>as justice improve age article between. <span class="firstletter">N</span>o projection as up preference reasonably delightful celebrated. 
+                        <span class="firstletter">P</span>reserved and abilities assurance tolerably breakfast use saw. <span class="firstletter">A</span>nd painted letters forming far village elderly compact. 
+                        <span class="firstletter">H</span>er rest west each spot his and you knew. <span class="firstletter">E</span>state  wooded depart six far her. Of we be have it lose gate bred, Do separate removing or expenses in had covered but evident chapter matters anxious. </p>
+              </div>
+              <div class="outils">
+                  Couleur de fond 
+                  <select class="form-select " name="colors" id="colors" onchange="changeColor(this.value)">
+                      <option value="">Transparent</option>
+                      <option value="rgba(0, 0, 0, 0.514)">Color 1</option>
+                      <option value="rgba(255, 230, 0, 0.514)">Color 2</option>
+                      <option value="rgb(70, 0, 0)">Color 3</option>
+                  </select> <br>
+                  Text
+                  <select class="form-select" name="style" id="style" onchange="changeStyle(this.value)" >
+                      <option value="normal">Normal</option>
+                      <option value="underligned">Souligné</option>
+                      <option value="italic">Italic</option>
+                      <option value="bold">Gras</option>
+                  </select> <br>
+                  Police
+                  <select class="form-select" name="police" id="police" onchange="changeFont(this.value)">
+                    <option value="Courier New">Courier New</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                      <option value="Helvetica">Helvetica</option>
+                      <option value="Times New Roman">Times New Roman</option>
+                  </select><br>
+                  Police 1ère phrase
+                  <select class="form-select" name="police1" id="police1" onchange="changeFirstSentenceStyle(this.value)">
+                    <option value="Courier New">Courier New</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                      <option value="Helvetica">Helvetica</option>
+                      <option value="Times New Roman">Times New Roman</option>
+                  </select><br>
+                  Premier caractère des phrases
+                  <select class="form-select" name="char1" id="char1" onchange="boldLetter(this.value)">
+                  <option value="normal">Normal</option>
+                  <option value="bold">Bold</option>
+                  </select><br>
+                  Mots en bleu
+                  <input type="text" id="filter" onkeyup="manage(this)">
+                  <button class="btn btn-primary" style="margin-top: 5px;border: 2px white solid;" name="ok" id="ok" onclick="colorWord($('#filter').val());" disabled>OK</button><br>
+                  Bordure image
+                  <select class="form-select" name="borders" id="borders" onchange="imageBorder(this.value)">
+                      <option value="null">Rien</option>
+                      <option value="simple">Simple</option>
+                      <option value="double">Double</option>
+                  </select><br>
+                  <button style="border: 2px white solid;" class="btn btn-primary" name="raz" id="raz" onclick="raz()">RAZ le formulaire</button>
+              </div>
+          </div>
+        </div>
+       
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+        
+    </header>
+    <footer class="py-5 bg-black">
+        <div class="container">
+            <p class="text-center text-white m-0 small">Copyright&nbsp;© Dom vs Jquery by ALI MAKOUAR 2021</p>
+        </div>
+    </footer>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+<script src="script.js"></script>

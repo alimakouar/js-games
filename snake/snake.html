@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>snake by ALI MAKOUAR</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <script src="../assets/bootstrap/js/jquery.js"></script>
+
+</head>
+
+<body onload="main()">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
+        <div class="container"><a class="navbar-brand" href="../../index.html">Ateliers TechWeb game by ALI MAKOUAR</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarResponsive"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">      <button id="restart" class="btn btn-primary" style="border: solid 1px;">RESTART</button>
+                    </li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Ateliers&nbsp;</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../snake/snake.html">Snake</a>
+                            <a class="dropdown-item" href="../memory/memory.html">Memory game</a>
+                            <a class="dropdown-item" href="../Quiz/quiz.html">Quiz</a>
+                            <a class="dropdown-item" href="../dom/dom.html">Dom</a>
+                            <a class="dropdown-item" href="../pizza/pizza.html">Pizza</a>
+
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>       
+
+    <header class="text-center text-white masthead">
+        <div class="masthead-content" style="margin-top: -120px;">
+            <div class="container">
+                <h1 class="masthead-heading mb-0">Snake</h1>
+            </div>
+            <div class="jeu">
+            <canvas id="snakeGame" width="800" height="600"></canvas>
+          </div>
+        </div>
+       
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+        
+    </header>
+    <footer class="py-5 bg-black">
+        <div class="container">
+            <p class="text-center text-white m-0 small">Copyright&nbsp;© snake by ALI MAKOUAR 2021</p>
+        </div>
+    </footer>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+<script src="script.js"></script>
